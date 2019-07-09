@@ -2,7 +2,7 @@ const Category = require('../models/Category');
 const Position = require('../models/Position');
 const errorHandler = require('../utils/errorHandler');
 
-
+/** Получаем все категории */
 module.exports.getAll = async function (req, res) {
     try {
         const categories = await Category.find({user: req.user.id});
@@ -12,6 +12,7 @@ module.exports.getAll = async function (req, res) {
     }
 };
 
+/** Получаем id категории */
 module.exports.getById = async function (req, res) {
     try {
         const category = await Category.findById(req.params.id);
@@ -21,6 +22,7 @@ module.exports.getById = async function (req, res) {
     }
 };
 
+/** Удаляем категорию и все ее позиции */
 module.exports.remove = async function (req, res) {
     try {
         await Category.remove({_id: req.params.id});
@@ -33,11 +35,12 @@ module.exports.remove = async function (req, res) {
     }
 };
 
+/** Создаем новую категорию */
 module.exports.create = async function (req, res) {
     const category = new Category({
-       name: req.body.name,
-       user: req.user.id,
-       imageSrc:  req.file ? req.file.path : ''
+        name: req.body.name,
+        user: req.user.id,
+        imageSrc: req.file ? req.file.path : ''
     });
     try {
         await category.save();
@@ -47,6 +50,7 @@ module.exports.create = async function (req, res) {
     }
 };
 
+/** Изменяем существующую категорию */
 module.exports.update = async function (req, res) {
     const updated = {
         name: req.body.name

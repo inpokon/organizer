@@ -1,5 +1,10 @@
+/* Модель позиций */
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+
+/**
+ * @const {positionSchema} Новый объект Schema */
 
 const positionSchema = new Schema({
     name: {

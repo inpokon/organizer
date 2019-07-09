@@ -1,5 +1,9 @@
+/* Модель категорий */
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+
+/**
+ * @const {categorySchema} Новый объект Schema */
 
 const categorySchema = new Schema({
     name: {

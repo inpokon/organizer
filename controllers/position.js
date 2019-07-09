@@ -1,5 +1,5 @@
 const Position = require('../models/Position');
-const errorHendler = require('../utils/errorHandler');
+const errorHandler = require('../utils/errorHandler');
 
 module.exports.getByCategoryId = async function (req, res) {
     try {
@@ -9,7 +9,7 @@ module.exports.getByCategoryId = async function (req, res) {
         });
         res.status(200).json(positions);
     } catch (e) {
-        errorHendler(res, e);
+        errorHandler(res, e);
     }
 };
 
@@ -23,7 +23,7 @@ module.exports.create = async function (req, res) {
         }).save();
         res.status(201).json(position);
     } catch (e) {
-        errorHendler(res, e);
+        errorHandler(res, e);
     }
 };
 
@@ -34,7 +34,7 @@ module.exports.remove = async function (req, res) {
             message: 'Позиция была удалена'
         })
     } catch (e) {
-        errorHendler(res, e);
+        errorHandler(res, e);
     }
 };
 
@@ -47,6 +47,6 @@ module.exports.update = async function (req, res) {
             );
         res.status(200).json(position);
     } catch (e) {
-        errorHendler(res, e);
+        errorHandler(res, e);
     }
 };

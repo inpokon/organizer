@@ -1,0 +1,21 @@
+<nav>
+		<div class="nav-wrapper grey darken-1">
+				<div class="brand-logo">
+						<a routerLink="/organizer">Органайзер</a>
+						<span>|</span>
+						<a routerLink="/">Портфолио</a>
+				</div>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li routerLinkActive="active">
+								<a routerLink="/organizer/login">Вход</a>
+						</li>
+						<li routerLinkActive="active">
+								<a routerLink="/organizer/register">Регистрация</a>
+						</li>
+				</ul>
+		</div>
+</nav>
+
+<div class="auth-block">
+		<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,115 @@
+<header class="header">
+		<div class="header__box">
+				<h1 class="header__title">Сайт<br>портфолио</h1>
+				<p class="header__desc">Примеры выполненных работ</p>
+		</div>
+</header>
+
+<main class="main">
+		<div class="work">
+				<h2 class="work__title">Мои работы</h2>
+				<div class="work__wrap">
+						<div class="work__item work__item--kz">
+								<span class="work__desc">
+										<svg class="plus">
+												<use xlink:href="assets/images/sprites.svg#plus"></use>
+										</svg>
+										<span class="work__text-top">
+												Совместная разработка сайта и ERP-системы
+												<br>
+												Для NewSmile Clinic
+										</span>
+										<span class="buttons">
+												<a class="btn btn--blue" href="https://newsmile.clinic/" target="_blank">
+														Перейти на сайт
+												</a>
+												<a class="btn btn--blue" routerLink="/erp">
+														Посмотреть приложение
+												</a>
+										</span>
+								</span>
+						</div>
+						<a class="work__item work__item--fb" href="https://flyboots.ru/" target="_blank">
+								<span class="work__desc">
+									<svg class="plus">
+										<use xlink:href="assets/images/sprites.svg#plus"></use>
+									</svg>
+										<span>
+												Салоны обуви Flyboots
+										</span>
+								</span>
+						</a>
+						<div class="work__box">
+								<a class="work__item" href="https://xn--90aharfglvcf9e0b3bi.xn--p1ai/" target="_blank">
+										<span class="work__desc">
+												<svg class="plus">
+													<use xlink:href="assets/images/sprites.svg#plus"></use>
+												</svg>
+												<span>
+														Свой дом в лесу
+														<br>
+														в коттеджном посёлке
+														<br>
+														“Серебряный ключ”
+												</span>
+										</span>
+								</a>
+								<a class="work__item" routerLink="/works">
+										<span class="work__txt">
+												Посмотреть другие
+												<br>
+												работы.
+										</span>
+										<span class="work__desc">
+												<svg class="plus">
+														<use xlink:href="assets/images/sprites.svg#plus"></use>
+												</svg>
+										</span>
+								</a>
+						</div>
+				</div>
+		</div>
+		<div class="skills">
+				<h2 class="skills__title">Мои навыки</h2>
+				<p class="skills__desc">С какими инструментами разработки я хорошо справляюсь</p>
+				<div
+								ng2-carouselamos
+								class="skills__slider"
+								[items]="items"
+								[width]="1000"
+								[$prev]="prev"
+								[$next]="next"
+								[$item]="item">
+				</div>
+				<ng-template #prev>
+						<svg-icon-sprite
+										src="assets/sprites/sprite.svg#arrow"
+										classes="arrow arrow--prev"
+										width="50px"
+										height="50px"
+						>
+						</svg-icon-sprite>
+				</ng-template>
+
+				<ng-template #next>
+						<svg-icon-sprite
+										src="assets/sprites/sprite.svg#arrow"
+										classes="arrow arrow--next"
+										width="50px"
+										height="50px"
+						>
+						</svg-icon-sprite>
+				</ng-template>
+				<ng-template #item let-item let-i="index">
+						<div class="skills__item">
+								<svg-icon-sprite
+												[src]="'assets/sprites/sprite.svg#' + item.name"
+												[classes]="item.name"
+												[ngClass]="{'active': item.activeClass}"
+								>
+								</svg-icon-sprite>
+						</div>
+				</ng-template>
+		</div>
+</main>
+

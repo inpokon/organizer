@@ -5,23 +5,34 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {LoginPageComponent} from './login-page/login-page.component';
-import {AuthLayoutComponent} from './shared/layouts/auth-layout/auth-layout.component';
-import {SiteLayoutComponent} from './shared/layouts/site-layout/site-layout.component';
-import {RegisterPageComponent} from './register-page/register-page.component';
-import {TokenInterceptor} from "./shared/classes/token.interceptor";
-import {OverviewPageComponent} from './overview-page/overview-page.component';
-import {AnalyticsPageComponent} from './analytics-page/analytics-page.component';
-import {HistoryPageComponent} from './history-page/history-page.component';
-import {OrderPageComponent} from './order-page/order-page.component';
-import {CategoriesPageComponent} from './categories-page/categories-page.component';
-import {LoaderComponent} from './shared/components/loader/loader.component';
-import {CategoriesFormComponent} from './categories-page/categories-form/categories-form.component';
-import {PositionsFormComponent} from './categories-page/categories-form/positions-form/positions-form.component';
-import {OrderCategoriesComponent} from './order-page/order-categories/order-categories.component';
-import {OrderPositionsComponent} from './order-page/order-positions/order-positions.component';
-import { HistoryListComponent } from './history-page/history-list/history-list.component';
-import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
+import {LoginPageComponent} from './organizer-page/login-page/login-page.component';
+import {AuthLayoutComponent} from './organizer-page/shared/layouts/auth-layout/auth-layout.component';
+import {SiteLayoutComponent} from './organizer-page/shared/layouts/site-layout/site-layout.component';
+import {RegisterPageComponent} from './organizer-page/register-page/register-page.component';
+import {TokenInterceptor} from "./organizer-page/shared/classes/token.interceptor";
+import {OverviewPageComponent} from './organizer-page/overview-page/overview-page.component';
+import {AnalyticsPageComponent} from './organizer-page/analytics-page/analytics-page.component';
+import {HistoryPageComponent} from './organizer-page/history-page/history-page.component';
+import {OrderPageComponent} from './organizer-page/order-page/order-page.component';
+import {CategoriesPageComponent} from './organizer-page/categories-page/categories-page.component';
+import {LoaderComponent} from './organizer-page/shared/components/loader/loader.component';
+import {CategoriesFormComponent} from './organizer-page/categories-page/categories-form/categories-form.component';
+import {PositionsFormComponent} from './organizer-page/categories-page/categories-form/positions-form/positions-form.component';
+import {OrderCategoriesComponent} from './organizer-page/order-page/order-categories/order-categories.component';
+import {OrderPositionsComponent} from './organizer-page/order-page/order-positions/order-positions.component';
+import {HistoryListComponent} from './organizer-page/history-page/history-list/history-list.component';
+import {HistoryFilterComponent} from './organizer-page/history-page/history-filter/history-filter.component';
+import {HomePageComponent} from './home-page/home-page.component';
+import {ContentComponent} from './home-page/content/content.component';
+import {HomeComponent} from './home-page/components/home/home.component';
+import {FooterComponent} from './home-page/components/footer/footer.component';
+import {IconSpriteModule} from 'ng-svg-icon-sprite';
+import {NavMenuComponent} from './home-page/components/nav-menu/nav-menu.component';
+import { WorksComponent } from './home-page/components/works/works.component';
+import { AboutComponent } from './home-page/components/about/about.component';
+import { ContactsComponent } from './home-page/components/contacts/contacts.component';
+import { ErpComponent } from './home-page/components/erp/erp.component';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 
 @NgModule({
     declarations: [
@@ -41,14 +52,25 @@ import { HistoryFilterComponent } from './history-page/history-filter/history-fi
         OrderCategoriesComponent,
         OrderPositionsComponent,
         HistoryListComponent,
-        HistoryFilterComponent
+        HistoryFilterComponent,
+        HomePageComponent,
+        ContentComponent,
+        HomeComponent,
+        FooterComponent,
+        NavMenuComponent,
+        WorksComponent,
+        AboutComponent,
+        ContactsComponent,
+        ErpComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        IconSpriteModule,
+        Ng2CarouselamosModule
     ],
     providers: [
         {
