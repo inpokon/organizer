@@ -182,13 +182,12 @@
 	}
 	&__warn {
 		display: flex;
-		flex-direction: column;
-		padding-top: 100px;
+		padding-top: 70px;
 		& > span {
 			display: flex;
 			align-items: center;
-			margin-bottom: 30px;
 			color: #fff;
+			width: 200px;
 			& > img {
 				margin-right: 10px;
 			}

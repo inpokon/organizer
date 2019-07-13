@@ -9,7 +9,6 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 export class NavMenuComponent implements OnInit {
 
   menu = [
-    {name: 'Главная', link: ''},
     {name: 'Мои работы', link: '/works'},
     {name: 'Обо мне', link: '/about'},
     //{name: 'Контакты', link: '/contacts'}

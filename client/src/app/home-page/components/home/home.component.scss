@@ -1,6 +1,7 @@
 .header {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
+	min-height: 800px;
 	background-color: #061727;
 	background-image: url("../../../../assets/images/header.png");
 	-webkit-background-size: cover;
@@ -16,16 +17,16 @@
 	line-height: 60px;
 	text-transform: uppercase;
 	text-align: center;
-	margin: 0 0 5px; }
+	margin: 0 0 30px; }
 .header__desc {
 	color: #ffffff;
 	font-family: "OpenSans", sans-serif;
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: 400;
-	line-height: 48px;
-	text-transform: uppercase;
+	line-height: normal;
 	text-align: center;
-	margin: 0; }
+	margin: 0;
+}
 
 main.main {
 	margin-left: 0;
@@ -233,7 +234,9 @@ main.main {
 	display: flex;
 	width: 70%;
 	max-width: 1250px;
-	margin: 70px auto 0; }
+	margin: 70px auto 0;
+	justify-content: center;
+}
 .skills__item {
 	height: 200px;
 	min-width: 200px;
@@ -273,6 +276,9 @@ main.main {
 	&--next {
 		transform: rotate(180deg);
 	}
+}
+button[disabled] .arrow {
+	opacity: 0;
 }
 .skills__slider div.controls {
 	width: 110%;
