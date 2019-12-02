@@ -121,5 +121,25 @@
 		}
 
 	}
+}
 
+@media (max-width: 1024px) {
+  .works {
+    h1 {
+      font-size: 7rem;
+    }
+    &__wrap-img {
+      flex-direction: column;
+    }
+    &__img {
+      height: 50%;
+      width: 100%;
+    }
+    &__item {
+      margin-bottom: 60px;
+    }
+  }
+  .par--bold {
+    font-size: 1.4rem;
+  }
 }

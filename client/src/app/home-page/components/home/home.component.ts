@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
 
     sliders: slide[];
 
+    width: number;
+
     constructor() {
         this.items = [
             {
@@ -68,6 +70,13 @@ export class HomeComponent implements OnInit {
                 activeClass: false
             }
         ];
+        this.width = 1000;
+        const windowWidth = window.screen.width;
+        if (windowWidth > 768 && windowWidth <= 1024) this.width = 650;
+        if (windowWidth >= 480 && windowWidth <= 768) this.width = 400;
+        if (windowWidth < 480) this.width = 320;
+
+        console.log(this.width)
     }
 
     ngOnInit() {
