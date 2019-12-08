@@ -1,0 +1,15 @@
+<nav class="nav">
+  <div class="nav__wrap">
+    <div class="nav__logo">
+      <span class="logo"></span>
+      <span class="logo-name">
+        Coderbob
+      </span>
+    </div>
+    <ul class="nav__list">
+      <li class="nav__item" *ngFor="let item of navList">
+        <span>{{item.name}}</span>
+      </li>
+    </ul>
+  </div>
+</nav>

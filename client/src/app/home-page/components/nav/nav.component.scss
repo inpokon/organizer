@@ -1,0 +1,56 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 15;
+  background-color: #ffffff;
+  &__wrap {
+    height: 54px;
+    padding: 22px 56px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list {
+    display: flex;
+    margin: 0 100px 0 0;
+    list-style: none;
+    padding: 0;
+  }
+  &__item {
+    span {
+      display: block;
+      font-size: 24px;
+      color: #023F61;
+      padding: 5px 35px;
+      cursor: pointer;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    .logo {
+      display: block;
+      position: relative;
+      color: #fff;
+      width: 62px;
+      height: 54px;
+      &::after {
+        content: '';
+        position: absolute; /* Абсолютное позиционирование */
+        border: 30px solid transparent;
+        border-bottom: 45px solid rgba(#59FFCD, 0.25);
+        top: -25px;
+      }
+    }
+    .logo-name {
+      display: block;
+      margin-left: 20px;
+      font-size: 24px;
+      color: #023F61;
+      text-transform: uppercase;
+    }
+  }
+}
