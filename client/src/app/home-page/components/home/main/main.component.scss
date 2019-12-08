@@ -1,16 +1,16 @@
 .main {
   margin-top: 100px;
-  width: 100%;
-  min-height: 776px;
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 100px);
   background: linear-gradient(125.53deg, #420076 5.25%, #410074 33.78%, #7C059A 81.81%, #8E059A 91.8%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 2px 10px 34px rgba(0, 0, 0, 0.25);
-  border-radius: 240px 240px 0 0;
+  border-radius: 0 500px 500px 0;
   color: #FFFFFF;
   position: relative;
   &__text {
     display: flex;
     flex-direction: column;
-    min-height: 676px;
+    min-height: calc(100vh - 200px);
     height: 100%;
     justify-content: space-between;
   }
@@ -67,24 +67,62 @@
   }
   &__slider {
     position: absolute;
-    width: calc(100% - 284px);
+    width: calc(100% - 374px);
     height: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     top: 0;
-    left: 0;
+    left: 90px;
+    &-title {
+      font-weight: 800;
+      font-size: 160px;
+      text-transform: uppercase;
+      opacity: 0.04;
+      transition: all .5s;
+    }
   }
 }
 
 .donut {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   position: relative;
   border-radius: 50%;
   border: 2px solid rgba(#FFFFFF, 0.3);
   box-sizing: border-box;
   box-shadow: 0px 0px 18px rgba(#59FF6A, 0.3);
+  &__svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+  &__title {
+    position: absolute;
+    opacity: 1;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #59FFCD;
+    text-shadow: 0px 0px 18px rgba(89, 255, 106, 0.3);
+    transition: all .5s;
+  }
+  &__desc {
+    max-width: 400px;
+    position: absolute;
+    opacity: 1;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    transition: all .5s;
+  }
 }
 
 .circle {
@@ -95,47 +133,82 @@
   background: #59FFCD;
   box-shadow: 0px 0px 18px #59FF6A;
   border-radius: 50%;
-  height: 140px;
-  width: 140px;
-  transition: all 0.6s ease;
-  z-index: 3;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  span {
+    font-weight: 800;
+    font-size: 34px;
+    opacity: 1;
+    transition: all .5s;
+  }
 }
 
-.circle1,
-.circle2 {
-  height: 70px;
-  width: 70px;
+.circle__one,
+.circle__two,
+.circle__three {
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   position: absolute;
   background: #FFFFFF;
-  box-shadow: 0px 0px 18px #59FF6A;
+  box-shadow: 0px 0px 18px #ffffff;
   top: 50%;
   left: 50%;
-  margin-left: -35px;
-  margin-top: -35px;
+  margin-left: -30px;
+  margin-top: -30px;
  // transform:rotateX(-90deg) translateZ(100px) rotate(180deg);
   transition: all 0.6s ease;
   z-index: 2;
-  animation: Orbita 15s linear infinite;
+  animation: Orbita 40s linear infinite;
 }
-.circle2 {
-  width: 88px;
-  height: 88px;
-  margin-left: -44px;
-  margin-top: -44px;
-  animation: Orbita2 15s linear infinite;
+.circle__two {
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  animation: Orbita2 20s linear infinite;
+  z-index: 3;
+}
+.circle__three {
+  width: 26px;
+  height: 26px;
+  margin-left: -13px;
+  margin-top: -13px;
+  animation: Orbita3 10s linear infinite;
+  z-index: 1;
 }
 
 @keyframes Orbita {
   from {
-    transform: rotate(0deg) translateX(300px) rotate(0deg);
+    transform: rotate(0deg) translateX(250px) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(300px) rotate(-360deg);
+    transform: rotate(360deg) translateX(250px) rotate(-360deg);
   }
 }
 @keyframes Orbita2 {
-  from { transform: rotate(0) translateX(300px) rotate(0); }
-  to   { transform: rotate(-360deg) translateX(300px) rotate(360deg); }
+  from { transform: rotate(0) translateX(250px) rotate(0); }
+  to   { transform: rotate(-360deg) translateX(250px) rotate(360deg); }
+}
+@keyframes Orbita3 {
+  from { transform: rotate(0) translateX(-250px) rotate(0); }
+  to   { transform: rotate(360deg) translateX(-250px) rotate(-360deg); }
 }
 
+.main__slider.active {
+  .main__slider-title {
+    opacity: 0;
+  }
+  .donut {
+    &__title, &__desc, &__svg {
+      opacity: 0;
+    }
+  }
+  .circle span {
+    opacity: 0;
+  }
+}

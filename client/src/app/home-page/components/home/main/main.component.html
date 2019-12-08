@@ -23,11 +23,32 @@
         </ul>
       </div>
     </div>
-    <div class="main__slider">
+    <div class="main__slider {{activeClass}}">
+      <div class="main__slider-title">
+        {{sliderTitle}}
+      </div>
       <div class="donut">
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-        <div class="circle"></div>
+        <div class="circle">
+          <span>
+            {{circleTitle}}
+          </span>
+        </div>
+        <div class="donut__title">
+         {{donutTitle}}
+        </div>
+        <div class="donut__desc">
+         {{desc}}
+        </div>
+        <div class="circle__one"></div>
+        <div class="circle__two"></div>
+        <div class="circle__three"></div>
+        <span class="donut__svg">
+          <svg-icon-sprite
+            src="assets/sprites/sprite.svg#{{svg}}"
+            classes="donut-svg"
+            style="width: 75%; height: 75%; opacity: 0.05; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)"
+          ></svg-icon-sprite>
+        </span>
       </div>
     </div>
   </div>
