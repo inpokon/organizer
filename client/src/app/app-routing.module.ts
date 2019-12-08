@@ -14,52 +14,49 @@ import {CategoriesFormComponent} from "./organizer-page/categories-page/categori
 import {OrderCategoriesComponent} from "./organizer-page/order-page/order-categories/order-categories.component";
 import {OrderPositionsComponent} from "./organizer-page/order-page/order-positions/order-positions.component";
 import {HomePageComponent} from "./home-page/home-page.component";
-import {WorksComponent} from "./home-page/components/works/works.component";
-import {AboutComponent} from "./home-page/components/about/about.component";
-import {ContactsComponent} from "./home-page/components/contacts/contacts.component";
+import {OrganizerPageComponent} from "./organizer-page/organizer-page.component";
 import {HomeComponent} from "./home-page/components/home/home.component";
-import {ErpComponent} from "./home-page/components/erp/erp.component";
 
 const routes: Routes = [
-    {
-        path: '', component: HomePageComponent, children: [
-            {path: '', component: HomeComponent},
-            {path: 'works', component: WorksComponent},
-            {path: 'about', component: AboutComponent},
-            {path: 'contacts', component: ContactsComponent},
-            {path: 'erp', component: ErpComponent}
-        ]
-    },
-    {
+  {
+    path: '', component: HomePageComponent, children: [
+      {path: '', component: HomeComponent}
+    ]
+  },
+  {
+    path: '', component: OrganizerPageComponent, children: [
+      {
         path: '', component: AuthLayoutComponent, children: [
-            {path: 'organizer', redirectTo: 'organizer/login', pathMatch: 'full'},
-            {path: 'organizer/login', component: LoginPageComponent},
-            {path: 'organizer/register', component: RegisterPageComponent}
+          {path: 'organizer', redirectTo: 'organizer/login', pathMatch: 'full'},
+          {path: 'organizer/login', component: LoginPageComponent},
+          {path: 'organizer/register', component: RegisterPageComponent}
         ]
-    },
-    {
+      },
+      {
         path: '', component: SiteLayoutComponent, canActivate: [AuthGuard], children: [
-            {path: 'organizer/overview', component: OverviewPageComponent},
-            {path: 'organizer/analytics', component: AnalyticsPageComponent},
-            {path: 'organizer/history', component: HistoryPageComponent},
-            {
-                path: 'organizer/order', component: OrderPageComponent, children: [
-                    {path: '', component: OrderCategoriesComponent},
-                    {path: ':id', component: OrderPositionsComponent},
-                ]
-            },
-            {path: 'organizer/categories', component: CategoriesPageComponent},
-            {path: 'organizer/categories/new', component: CategoriesFormComponent},
-            {path: 'organizer/categories/:id', component: CategoriesFormComponent},
+          {path: 'organizer/overview', component: OverviewPageComponent},
+          {path: 'organizer/analytics', component: AnalyticsPageComponent},
+          {path: 'organizer/history', component: HistoryPageComponent},
+          {
+            path: 'organizer/order', component: OrderPageComponent, children: [
+              {path: '', component: OrderCategoriesComponent},
+              {path: ':id', component: OrderPositionsComponent},
+            ]
+          },
+          {path: 'organizer/categories', component: CategoriesPageComponent},
+          {path: 'organizer/categories/new', component: CategoriesFormComponent},
+          {path: 'organizer/categories/:id', component: CategoriesFormComponent},
         ]
-    }
+      }
+    ]
+  }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {
-        scrollPositionRestoration: 'enabled', // Add options right here
-    })],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled', // Add options right here
+  })],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {
 }

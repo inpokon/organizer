@@ -23,16 +23,16 @@ import {OrderPositionsComponent} from './organizer-page/order-page/order-positio
 import {HistoryListComponent} from './organizer-page/history-page/history-list/history-list.component';
 import {HistoryFilterComponent} from './organizer-page/history-page/history-filter/history-filter.component';
 import {HomePageComponent} from './home-page/home-page.component';
-import {ContentComponent} from './home-page/content/content.component';
-import {HomeComponent} from './home-page/components/home/home.component';
-import {FooterComponent} from './home-page/components/footer/footer.component';
 import {IconSpriteModule} from 'ng-svg-icon-sprite';
-import {NavMenuComponent} from './home-page/components/nav-menu/nav-menu.component';
-import { WorksComponent } from './home-page/components/works/works.component';
-import { AboutComponent } from './home-page/components/about/about.component';
-import { ContactsComponent } from './home-page/components/contacts/contacts.component';
-import { ErpComponent } from './home-page/components/erp/erp.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { MainComponent } from './home-page/components/home/main/main.component';
+import { FooterComponent } from './home-page/components/footer/footer.component';
+import { WorkComponent } from './home-page/components/work/work.component';
+import { NavComponent } from './home-page/components/nav/nav.component';
+import { OrganizerPageComponent } from './organizer-page/organizer-page.component';
+import { ExperienceComponent } from './home-page/components/home/experience/experience.component';
+import { HomeComponent } from './home-page/components/home/home.component';
+import { WorksComponent } from './home-page/components/home/works/works.component';
 
 @NgModule({
     declarations: [
@@ -54,14 +54,14 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
         HistoryListComponent,
         HistoryFilterComponent,
         HomePageComponent,
-        ContentComponent,
-        HomeComponent,
+        MainComponent,
         FooterComponent,
-        NavMenuComponent,
-        WorksComponent,
-        AboutComponent,
-        ContactsComponent,
-        ErpComponent
+        WorkComponent,
+        NavComponent,
+        OrganizerPageComponent,
+        ExperienceComponent,
+        HomeComponent,
+        WorksComponent
     ],
     imports: [
         BrowserModule,
