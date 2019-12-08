@@ -1,3 +1,40 @@
 <div class="skills">
   <h2 class="title skills__title">Мои навыки</h2>
+  <div
+    ng2-carouselamos
+    class="skills__slider"
+    [items]="items"
+    [width]="width"
+    [$prev]="prev"
+    [$next]="next"
+    [$item]="item">
+  </div>
+  <ng-template #prev>
+    <svg-icon-sprite
+      src="assets/sprites/sprite.svg#arrow"
+      classes="arrow arrow--prev"
+      width="50px"
+      height="50px"
+    >
+    </svg-icon-sprite>
+  </ng-template>
+
+  <ng-template #next>
+    <svg-icon-sprite
+      src="assets/sprites/sprite.svg#arrow"
+      classes="arrow arrow--next"
+      width="50px"
+      height="50px"
+    >
+    </svg-icon-sprite>
+  </ng-template>
+  <ng-template #item let-item let-i="index">
+    <div class="skills__item">
+      <svg-icon-sprite
+        [src]="'assets/sprites/sprite.svg#' + item.name"
+        [classes]="item.name"
+      >
+      </svg-icon-sprite>
+    </div>
+  </ng-template>
 </div>
