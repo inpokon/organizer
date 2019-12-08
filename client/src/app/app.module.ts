@@ -33,6 +33,7 @@ import { OrganizerPageComponent } from './organizer-page/organizer-page.componen
 import { ExperienceComponent } from './home-page/components/home/experience/experience.component';
 import { HomeComponent } from './home-page/components/home/home.component';
 import { WorksComponent } from './home-page/components/home/works/works.component';
+import { SkillsComponent } from './home-page/components/home/skills/skills.component';
 
 @NgModule({
     declarations: [
@@ -61,7 +62,8 @@ import { WorksComponent } from './home-page/components/home/works/works.componen
         OrganizerPageComponent,
         ExperienceComponent,
         HomeComponent,
-        WorksComponent
+        WorksComponent,
+        SkillsComponent
     ],
     imports: [
         BrowserModule,

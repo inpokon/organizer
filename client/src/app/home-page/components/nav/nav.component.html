@@ -1,11 +1,11 @@
 <nav class="nav">
   <div class="nav__wrap">
-    <div class="nav__logo">
+    <a routerLink="/" class="nav__logo">
       <span class="logo"></span>
       <span class="logo-name">
         Coderbob
       </span>
-    </div>
+    </a>
     <ul class="nav__list">
       <li class="nav__item" *ngFor="let item of navList">
         <span>{{item.name}}</span>

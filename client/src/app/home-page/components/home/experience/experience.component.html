@@ -3,9 +3,23 @@
     Опыт работы и обучение
   </h2>
   <div class="experience__wrap">
+    <span class="experience__line experience__line--left"></span>
+    <span class="experience__line experience__line--right"></span>
     <ul>
-      <li *ngFor="let item of experience" class="experience__item">
-
+      <li *ngFor="let item of experience"
+          [ngClass]="'experience__item experience__item--' + item.type + ' experience__item--' + item.variant">
+        <div class="experience__date">
+          {{item.date}}
+        </div>
+        <div class="experience__text">
+          <h3 class="experience__subtitle" *ngIf="item.title.length">{{item.title}}</h3>
+          <p class="experience__desc" *ngIf="item.desc.length">{{item.desc}}</p>
+          <div class="experience__tabs" *ngIf="item.tabs.length">
+            <div *ngFor="let tab of item.tabs" class="experience__tab">
+              {{tab}}
+            </div>
+          </div>
+        </div>
       </li>
     </ul>
   </div>

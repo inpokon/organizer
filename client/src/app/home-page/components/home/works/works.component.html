@@ -1,3 +1,52 @@
-<p>
-  works works!
-</p>
+<div class="works">
+  <h2 class="title works__title">
+    Портфолио
+  </h2>
+  <ul>
+    <li class="works__item-desc">
+      Разработка SPA
+      <svg-icon-sprite
+        src="assets/sprites/sprite.svg#arrow"
+        classes="donut-svg"
+        style="width: 16px; height: 16px; margin-left: 16px; transform: rotate(180deg) translateY(-3px)"
+      ></svg-icon-sprite>
+    </li>
+    <li *ngFor="let item of spa" class="works__spa">
+      <img src="../../../../../assets/images/{{item.img}}.jpg" alt="{{item.img}}">
+      <span class="works__hover">
+        <span>{{item.title}}</span>
+        <a [routerLink]="item.link">Подробнее</a>
+      </span>
+    </li>
+    <li class="works__item-desc">
+      Сайты под ключ
+      <svg-icon-sprite
+        src="assets/sprites/sprite.svg#arrow"
+        classes="donut-svg"
+        style="width: 16px; height: 16px; margin-left: 16px; transform: rotate(180deg) translateY(-3px)"
+      ></svg-icon-sprite>
+    </li>
+    <li *ngFor="let item of sites" class="works__sites">
+      <img src="../../../../../assets/images/{{item.img}}.jpg" alt="{{item.img}}">
+      <span class="works__hover">
+        <span>{{item.title}}</span>
+        <a [routerLink]="item.link">Подробнее</a>
+      </span>
+    </li>
+    <li class="works__item-desc">
+      Тех-поддержка сайтов
+      <svg-icon-sprite
+        src="assets/sprites/sprite.svg#arrow"
+        classes="donut-svg"
+        style="width: 16px; height: 16px; margin-left: 16px; transform: rotate(180deg) translateY(-3px)"
+      ></svg-icon-sprite>
+    </li>
+    <li *ngFor="let item of teh" class="works__teh">
+      <img src="../../../../../assets/images/{{item.img}}.jpg" alt="{{item.img}}">
+      <span class="works__hover">
+        <span>{{item.title}}</span>
+        <a href="{{item.link}}" target="_blank">Перейти на сайт</a>
+      </span>
+    </li>
+  </ul>
+</div>

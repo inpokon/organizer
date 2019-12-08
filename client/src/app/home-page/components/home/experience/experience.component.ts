@@ -14,13 +14,13 @@ export class ExperienceComponent implements OnInit {
       title: '"Мегамир IT"',
       desc: 'Разработка ERP для сети стоматологических клиник "New Smile".',
       tabs: [
-        'ReactJs',
+        'React-Js',
         '1c-Битрикс'
       ]
     },
     {
-      date: 'Декабрь 2019',
-      type: 'Course',
+      date: 'Октябрь 2019',
+      type: 'course transform',
       variant: 'standard',
       title: 'Redux',
       desc: 'Курс: "Профессиональная Разработка".',
@@ -30,7 +30,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Июль 2019',
-      type: 'Course',
+      type: 'course',
       variant: 'standard',
       title: 'FullStack-Мастер',
       desc: 'Курс: "Разработка CRM-системы".',
@@ -42,7 +42,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Июнь 2019',
-      type: 'Course',
+      type: 'course',
       variant: 'min',
       title: '',
       desc: 'Курс: "Angular 4 c Нуля до Профи".',
@@ -50,7 +50,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Май 2019',
-      type: 'work',
+      type: 'work transform',
       variant: 'standard',
       title: 'Разработка многостраничного сайта',
       desc: 'для стомтологической клиники NewSmile.',
@@ -75,7 +75,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Январь 2019',
-      type: 'Course',
+      type: 'course transform',
       variant: 'standard',
       title: 'Pug',
       desc: 'Всегда рад изучить новую технологию для более качественной разработке.',
@@ -86,19 +86,19 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Ноябрь 2018',
-      type: 'work',
+      type: 'work transform',
       variant: 'standard',
       title: 'Разработка ERP',
       desc: 'Начали командную работу по разрабоке ERP.',
       tabs: [
-        'ReactJs',
+        'React-Js',
         '1C-Битрикс',
         'Git',
       ]
     },
     {
       date: 'Сентябрь 2018',
-      type: 'Course',
+      type: 'course transform',
       variant: 'standard',
       title: 'React',
       desc: 'Курс: "Профессиональная Разработка".',
@@ -106,7 +106,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Август 2018',
-      type: 'work',
+      type: 'work transform',
       variant: 'standard',
       title: '"Серебряный ключ"',
       desc: 'Landing-page для коттеджного поселка.',
@@ -119,7 +119,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Июль 2018',
-      type: 'Course',
+      type: 'course transform',
       variant: 'min',
       title: '',
       desc: 'Курс: "Программирование на PHP".',
@@ -127,7 +127,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Июнь 2018',
-      type: 'Course',
+      type: 'course',
       variant: 'min',
       title: '',
       desc: 'Курс: "1С-Битрикс ПРАКТИКА СОЗДАНИЯ ВЕБ-ПРОЕКТОВ".',
@@ -135,7 +135,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Май 2018',
-      type: 'Course',
+      type: 'course',
       variant: 'min',
       title: '',
       desc: 'Изучение с наставником JavaScript, БЭМ, Git.',
@@ -143,16 +143,16 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Апрель 2018',
-      type: 'work',
+      type: 'work transform',
       variant: 'standard',
       title: 'Frontend разработчик "Мегамир IT"',
-      desc: 'Устроился Frontend разработчиком в студию по разрабоке и тех.поддержки сайтов "Мегамир IT".',
+      desc: 'Устроился Frontend разработчиком в студию по разрабоке и тех.поддержки сайтов.',
       tabs: []
     },
     {
       date: 'Март 2018',
-      type: 'Course',
-      variant: 'standard',
+      type: 'course transform',
+      variant: 'min',
       title: 'Jquery для верстки',
       desc: '',
       tabs: [
@@ -163,8 +163,8 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Февраль 2018',
-      type: 'Course',
-      variant: 'standard',
+      type: 'course',
+      variant: 'min',
       title: 'Wordpress для верстальщиков',
       desc: '',
       tabs: [
@@ -174,8 +174,8 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Январь 2018',
-      type: 'Course',
-      variant: 'standard',
+      type: 'course',
+      variant: 'min',
       title: 'Академия верстки: Веб-разработчик',
       desc: '',
       tabs: [
@@ -187,21 +187,20 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Декабрь 2017',
-      type: 'Course',
-      variant: 'standard',
-      title: 'Академия верстки: Веб-разработчик',
+      type: 'course',
+      variant: 'min',
+      title: 'Geekbrains: Веб-разработчик',
       desc: '',
       tabs: [
         'Html',
         'CSS',
-        'Gulp',
         'JS',
       ]
     },
     {
       date: 'Ноябрь 2017',
-      type: 'Course',
-      variant: 'standard',
+      type: 'course',
+      variant: 'min',
       title: 'HTML-Academy',
       desc: 'Прохождение курсов и тестов.',
       tabs: [
