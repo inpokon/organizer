@@ -25,12 +25,63 @@
     </div>
     <div class="erp__images">
       <div class="erp__img"
-      *ngFor="let item of items">
-        <img *ngIf="currentTab === 'common'" [src]="'../../../../assets/images/erp/' + item" [alt]="item">
-        <img *ngIf="currentTab === 'doctor'" [src]="'../../../../assets/images/erp/doctor/' + item" [alt]="item">
-        <img *ngIf="currentTab === 'admin'" [src]="'../../../../assets/images/erp/admin/' + item" [alt]="item">
+           *ngFor="let item of items; let i = index"
+           (click)="onClickImg(item, i)"
+      >
+        <img [src]="'../../../../' + item.img" [alt]="item.name">
+        <span>
+          {{item.name + i}}
+        </span>
       </div>
     </div>
+  </div>
+  <div class="modal" *ngIf="openModal">
+    <div class="modal__wrap">
+      <div class="modal__close"
+           (click)="onCloseModal()"
+      >
+        <svg-icon-sprite
+          src="assets/sprites/sprite.svg#plus"
+          classes="close"
+          width="20px"
+          height="20px"
+        >
+        </svg-icon-sprite>
+      </div>
+      <div class="modal__arrow modal__arrow--prev"
+           *ngIf="currentIndex !== 0"
+           (click)="onClickArrow(false)"
+      >
+        <svg-icon-sprite
+          src="assets/sprites/sprite.svg#arrow"
+          classes="arrow arrow--prev"
+          width="20px"
+          height="20px"
+        >
+        </svg-icon-sprite>
+      </div>
+      <div class="modal__content">
+        <div class="modal__img">
+          <img [src]="'../../../../' + currentItem.img" [alt]="currentItem.name">
+        </div>
+        <div class="modal__desc">
+          {{currentItem.prompt}}
+        </div>
+      </div>
+      <div class="modal__arrow modal__arrow--next"
+           *ngIf="currentIndex !== items.length - 1"
+           (click)="onClickArrow(true)"
+      >
+        <svg-icon-sprite
+          src="assets/sprites/sprite.svg#arrow"
+          classes="arrow arrow--next"
+          width="20px"
+          height="20px"
+        >
+        </svg-icon-sprite>
+      </div>
+    </div>
+
   </div>
   <app-footer></app-footer>
 </div>

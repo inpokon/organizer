@@ -1,10 +1,8 @@
 export interface erpMenu  {
     name: string,
     activeClass: boolean,
-    type: string[],
     img: string,
     prompt: string
-    children?: erpMenu[]
 }
 
 export interface tab {

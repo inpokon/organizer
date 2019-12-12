@@ -6,9 +6,18 @@
         Coderbob
       </span>
     </a>
-    <ul class="nav__list">
-      <li class="nav__item" *ngFor="let item of navList">
+    <ul class="nav__list" *ngIf="isHome">
+      <li class="nav__item"
+          *ngFor="let item of navList"
+      >
         <span>{{item.name}}</span>
+      </li>
+    </ul>
+    <ul class="nav__list" *ngIf="!isHome && router.url === '/erp-info'">
+      <li class="nav__item" routerLink="/erp" >
+        <span >
+          Вернуться назад
+        </span>
       </li>
     </ul>
   </div>
