@@ -1,0 +1,36 @@
+<div class="erp-wrapper">
+  <app-nav></app-nav>
+  <div class="erp">
+    <div class="erp__tabs">
+      <div class="tabs">
+        <div class="tab "
+             [ngClass]="{'active' : currentTab === 'common'}"
+             (click)="onClickTab('common')"
+        >
+          Общие компоненты
+        </div>
+        <div class="tab "
+             [ngClass]="{'active' : currentTab === 'doctor'}"
+             (click)="onClickTab('doctor')"
+        >
+          Роль врача
+        </div>
+        <div class="tab "
+             [ngClass]="{'active' : currentTab === 'admin'}"
+             (click)="onClickTab('admin')"
+        >
+          Роль администратора
+        </div>
+      </div>
+    </div>
+    <div class="erp__images">
+      <div class="erp__img"
+      *ngFor="let item of items">
+        <img *ngIf="currentTab === 'common'" [src]="'../../../../assets/images/erp/' + item" [alt]="item">
+        <img *ngIf="currentTab === 'doctor'" [src]="'../../../../assets/images/erp/doctor/' + item" [alt]="item">
+        <img *ngIf="currentTab === 'admin'" [src]="'../../../../assets/images/erp/admin/' + item" [alt]="item">
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

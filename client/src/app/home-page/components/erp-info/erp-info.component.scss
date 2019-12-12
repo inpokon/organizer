@@ -1,0 +1,80 @@
+.erp-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    h3 {
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.erp {
+  flex: 1 0 auto;
+  position: relative;
+  padding-top: 68px;
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__img {
+    width: 20%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  border: 1px solid #80059A;
+}
+
+.tab {
+  padding: 8px 14px 10px;
+  font-size: 14px;
+  color: #80059A;
+  border-right: 1px solid #80059A;
+  transition: all .3s;
+  cursor: pointer;
+  &:first-child {
+    border-radius: 40px 0 0 40px;
+  }
+  &:last-child {
+    border-right: none;
+    border-radius: 0 40px 40px 0;
+  }
+  &:hover {
+    background-color: #80059A;
+    color: #ffffff;
+  }
+  &.active {
+    background-color: #80059A;
+    color: #ffffff;
+  }
+}
+
+.footer {
+  flex: 0 0 auto;
+}
