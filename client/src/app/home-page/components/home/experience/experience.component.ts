@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: ['./experience.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ExperienceComponent implements OnInit {
   experience = [
@@ -20,7 +21,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Октябрь 2019',
-      type: 'course transform',
+      type: 'course',
       variant: 'standard',
       title: 'Redux',
       desc: 'Курс: "Профессиональная Разработка".',
@@ -50,7 +51,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Май 2019',
-      type: 'work transform',
+      type: 'work',
       variant: 'standard',
       title: 'Разработка многостраничного сайта',
       desc: 'для стомтологической клиники NewSmile.',
@@ -75,7 +76,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Январь 2019',
-      type: 'course transform',
+      type: 'course',
       variant: 'standard',
       title: 'Pug',
       desc: 'Всегда рад изучить новую технологию для более качественной разработке.',
@@ -86,7 +87,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Ноябрь 2018',
-      type: 'work transform',
+      type: 'work',
       variant: 'standard',
       title: 'Разработка ERP',
       desc: 'Начали командную работу по разрабоке ERP.',
@@ -98,7 +99,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Сентябрь 2018',
-      type: 'course transform',
+      type: 'course',
       variant: 'standard',
       title: 'React',
       desc: 'Курс: "Профессиональная Разработка".',
@@ -106,7 +107,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Август 2018',
-      type: 'work transform',
+      type: 'work',
       variant: 'standard',
       title: '"Серебряный ключ"',
       desc: 'Landing-page для коттеджного поселка.',
@@ -119,7 +120,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Июль 2018',
-      type: 'course transform',
+      type: 'course',
       variant: 'min',
       title: '',
       desc: 'Курс: "Программирование на PHP".',
@@ -143,7 +144,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Апрель 2018',
-      type: 'work transform',
+      type: 'work',
       variant: 'standard',
       title: 'Frontend разработчик "Мегамир IT"',
       desc: 'Устроился Frontend разработчиком в студию по разрабоке и тех.поддержки сайтов.',
@@ -151,7 +152,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       date: 'Март 2018',
-      type: 'course transform',
+      type: 'course',
       variant: 'min',
       title: 'Jquery для верстки',
       desc: '',
@@ -212,6 +213,10 @@ export class ExperienceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClickBtn = () => {
+    this.experience = this.experience.reverse();
   }
 
 }

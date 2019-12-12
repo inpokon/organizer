@@ -34,6 +34,7 @@ import { ExperienceComponent } from './home-page/components/home/experience/expe
 import { HomeComponent } from './home-page/components/home/home.component';
 import { WorksComponent } from './home-page/components/home/works/works.component';
 import { SkillsComponent } from './home-page/components/home/skills/skills.component';
+import { ErpInfoComponent } from './home-page/components/erp-info/erp-info.component';
 
 @NgModule({
     declarations: [
@@ -63,7 +64,8 @@ import { SkillsComponent } from './home-page/components/home/skills/skills.compo
         ExperienceComponent,
         HomeComponent,
         WorksComponent,
-        SkillsComponent
+        SkillsComponent,
+        ErpInfoComponent
     ],
     imports: [
         BrowserModule,

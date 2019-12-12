@@ -5,6 +5,15 @@
   <div class="experience__wrap">
     <span class="experience__line experience__line--left"></span>
     <span class="experience__line experience__line--right"></span>
+    <div class="experience__btn" (click)="onClickBtn()">
+      <svg-icon-sprite
+        src="assets/sprites/sprite.svg#reverse"
+        classes="reverse"
+        width="20px"
+        height="20px"
+      >
+      </svg-icon-sprite>
+    </div>
     <ul>
       <li *ngFor="let item of experience"
           [ngClass]="'experience__item experience__item--' + item.type + ' experience__item--' + item.variant">

@@ -18,55 +18,63 @@ export class SkillsComponent implements OnInit {
     this.items = [
       {
         name: 'webpack',
-        activeClass: false
+        desc: 'Webpack'
       },
       {
         name: 'js',
-        activeClass: false
+        desc: 'JavaScript'
       },
       {
         name: 'react',
-        activeClass: true
+        desc: 'ReactJS'
       },
       {
         name: 'angular',
-        activeClass: false
+        desc: 'AngularJS'
       },
       {
         name: '1c_bitrix',
-        activeClass: false
+        desc: '1C-Bitrix'
       },
       {
         name: 'gulp',
-        activeClass: false
+        desc: 'Gulp'
       },
       {
         name: 'boostrap',
-        activeClass: false
+        desc: 'Bootstrap'
       },
       {
         name: 'html5',
-        activeClass: false
+        desc: 'HTML5'
       },
       {
         name: 'jquery',
-        activeClass: false
+        desc: 'JQuery'
       },
       {
         name: 'sass',
-        activeClass: false
+        desc: 'Sass/Scss'
       },
       {
         name: 'wordpress',
-        activeClass: false
+        desc: 'WordPress'
       },
       {
         name: 'git',
-        activeClass: false
+        desc: 'Git'
       },
       {
         name: 'css3',
-        activeClass: false
+        desc: 'CSS3'
+      },
+      {
+        name: 'node',
+        desc: 'NodeJS'
+      },
+      {
+        name: 'redux',
+        desc: 'Redux'
       }
     ];
     this.width = 1000;

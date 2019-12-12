@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorksComponent implements OnInit {
 
+  activeSpa = false;
+  activeSites = false;
+  activeTeh = false;
+
   spa = [
     {
       img: 'erp',
@@ -76,6 +80,10 @@ export class WorksComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onChangeIsHovered = (type, result) => {
+    this['active' + type] = result;
   }
 
 }

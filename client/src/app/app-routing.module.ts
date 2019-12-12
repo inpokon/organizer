@@ -16,11 +16,19 @@ import {OrderPositionsComponent} from "./organizer-page/order-page/order-positio
 import {HomePageComponent} from "./home-page/home-page.component";
 import {OrganizerPageComponent} from "./organizer-page/organizer-page.component";
 import {HomeComponent} from "./home-page/components/home/home.component";
+import {WorkComponent} from "./home-page/components/work/work.component";
+import {ErpInfoComponent} from "./home-page/components/erp-info/erp-info.component";
 
 const routes: Routes = [
   {
     path: '', component: HomePageComponent, children: [
-      {path: '', component: HomeComponent}
+      {path: '', component: HomeComponent},
+      {path: 'erp', component: WorkComponent},
+      {path: 'erp-info', component: ErpInfoComponent},
+      {path: 'organizer-about', component: WorkComponent},
+      {path: 'newsmile', component: WorkComponent},
+      {path: 'flyboots', component: WorkComponent},
+      {path: 'key', component: WorkComponent},
     ]
   },
   {

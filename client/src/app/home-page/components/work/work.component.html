@@ -1,3 +1,79 @@
-<p>
-  work works!
-</p>
+<div class="work-wrapper">
+  <app-nav></app-nav>
+  <div class="work">
+    <div class="work__arrow work__arrow--prev">
+      <svg-icon-sprite
+        src="assets/sprites/sprite.svg#arrow"
+        classes="arrow arrow--prev"
+        width="50px"
+        height="50px"
+      >
+      </svg-icon-sprite>
+    </div>
+
+    <div class="container">
+      <h1>
+        {{work.title}}
+      </h1>
+      <div class="work__content">
+        <div>
+          <div class="work__img">
+            <img [src]="'../../../../assets/images/' + work.img + '.jpg'" [alt]="work.img">
+          </div>
+
+          <div class="work__button"
+               *ngIf="currentRoute === 'erp'"
+          >
+            <span>
+              В связи с политикой конфиденциальности данного проекта, я не могу предоставить доступы к приложению.
+              <br>
+              Поэтому, я подготовил для Вас небольшую презентацию в виде скриншотов.
+            </span>
+            <a class="btn"
+               routerLink="/erp-info"
+            >
+              {{work.nameBtn}}
+            </a>
+          </div>
+
+          <div class="work__button"
+               *ngIf="currentRoute === 'organizer-about'"
+          >
+            <a class="btn"
+               routerLink="/organizer"
+            >
+              {{work.nameBtn}}
+            </a>
+          </div>
+
+          <div class="work__button"
+               *ngIf="currentRoute !== 'organizer-about' && currentRoute !== 'erp'"
+          >
+            <a class="btn"
+               [href]="work.link"
+               target="_blank"
+            >
+              {{work.nameBtn}}
+            </a>
+          </div>
+
+        </div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="work__arrow work__arrow--next">
+      <svg-icon-sprite
+        src="assets/sprites/sprite.svg#arrow"
+        classes="arrow arrow--next"
+        width="50px"
+        height="50px"
+      >
+      </svg-icon-sprite>
+    </div>
+
+  </div>
+  <app-footer></app-footer>
+</div>

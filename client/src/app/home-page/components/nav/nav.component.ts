@@ -8,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class NavComponent implements OnInit {
 
   navList = [
-    {code: 'about', name: 'Обо мне'},
-    {code: 'workExperience', name: 'Опыт работы'},
-    {code: 'portfolio', name: 'Портфолио'},
+    {code: 'experience', name: 'Опыт работы и обучение'},
+    {code: 'works', name: 'Портфолио'},
     {code: 'skills', name: 'Навыки'},
     {code: 'contact', name: 'Контакты'},
   ];

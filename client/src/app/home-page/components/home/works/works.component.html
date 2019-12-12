@@ -3,7 +3,10 @@
     Портфолио
   </h2>
   <ul>
-    <li class="works__item-desc">
+    <li class="works__item-desc"
+        (mouseenter)="onChangeIsHovered('Spa', true)"
+        (mouseleave)="onChangeIsHovered('Spa', false)"
+    >
       Разработка SPA
       <svg-icon-sprite
         src="assets/sprites/sprite.svg#arrow"
@@ -11,14 +14,17 @@
         style="width: 16px; height: 16px; margin-left: 16px; transform: rotate(180deg) translateY(-3px)"
       ></svg-icon-sprite>
     </li>
-    <li *ngFor="let item of spa" class="works__spa">
+    <li *ngFor="let item of spa" class="works__spa " [ngClass]="{'active': activeSpa}">
       <img src="../../../../../assets/images/{{item.img}}.jpg" alt="{{item.img}}">
       <span class="works__hover">
         <span>{{item.title}}</span>
         <a [routerLink]="item.link">Подробнее</a>
       </span>
     </li>
-    <li class="works__item-desc">
+    <li class="works__item-desc"
+        (mouseenter)="onChangeIsHovered('Sites', true)"
+        (mouseleave)="onChangeIsHovered('Sites', false)"
+    >
       Сайты под ключ
       <svg-icon-sprite
         src="assets/sprites/sprite.svg#arrow"
@@ -26,14 +32,17 @@
         style="width: 16px; height: 16px; margin-left: 16px; transform: rotate(180deg) translateY(-3px)"
       ></svg-icon-sprite>
     </li>
-    <li *ngFor="let item of sites" class="works__sites">
+    <li *ngFor="let item of sites" class="works__sites " [ngClass]="{'active': activeSites}">
       <img src="../../../../../assets/images/{{item.img}}.jpg" alt="{{item.img}}">
       <span class="works__hover">
         <span>{{item.title}}</span>
         <a [routerLink]="item.link">Подробнее</a>
       </span>
     </li>
-    <li class="works__item-desc">
+    <li class="works__item-desc"
+        (mouseenter)="onChangeIsHovered('Teh', true)"
+        (mouseleave)="onChangeIsHovered('Teh', false)"
+    >
       Тех-поддержка сайтов
       <svg-icon-sprite
         src="assets/sprites/sprite.svg#arrow"
@@ -41,7 +50,7 @@
         style="width: 16px; height: 16px; margin-left: 16px; transform: rotate(180deg) translateY(-3px)"
       ></svg-icon-sprite>
     </li>
-    <li *ngFor="let item of teh" class="works__teh">
+    <li *ngFor="let item of teh" class="works__teh " [ngClass]="{'active': activeTeh}">
       <img src="../../../../../assets/images/{{item.img}}.jpg" alt="{{item.img}}">
       <span class="works__hover">
         <span>{{item.title}}</span>

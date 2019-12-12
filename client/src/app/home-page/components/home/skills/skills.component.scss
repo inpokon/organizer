@@ -41,7 +41,14 @@
   -webkit-align-items: center;
   -moz-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column;
+  & > span {
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
 .skills__item svg {
   color: rgba(#80059A, 0.6);
   transition: all .3s;
@@ -67,6 +74,7 @@
   padding: 10px;
   outline: none;
   transition: all .3s;
+  background-color: #fff;
   &--next {
     transform: rotate(180deg);
   }
