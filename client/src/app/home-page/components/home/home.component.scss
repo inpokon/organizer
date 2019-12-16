@@ -1,0 +1,14 @@
+#main {
+  padding-top: 69px;
+}
+@media (max-width: 1920px) {
+ #main {
+   padding-top: 54px;
+ }
+}
+
+@media (max-width: 1199.98px) {
+  #main {
+    padding-top: 0;
+  }
+}

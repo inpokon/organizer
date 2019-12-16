@@ -1,5 +1,4 @@
 .main {
-  margin-top: 69px;
   width: calc(100% - 100px);
   min-height: calc(100vh - 69px);
   background: linear-gradient(125.53deg, #420076 5.25%, #410074 33.78%, #7C059A 81.81%, #8E059A 91.8%);
@@ -84,6 +83,7 @@
   border: 2px solid rgba(#FFFFFF, 0.3);
   box-sizing: border-box;
   box-shadow: 0px 0px 18px rgba(#59FF6A, 0.3);
+  flex-shrink: 0;
   &__svg {
     display: block;
     width: 100%;
@@ -159,6 +159,7 @@
   z-index: 2;
   animation: Orbita 40s linear infinite;
 }
+
 .circle__two {
   width: 80px;
   height: 80px;
@@ -207,7 +208,6 @@
   }
 }
 
-
 .about {
   display: flex;
   justify-content: flex-start;
@@ -243,4 +243,315 @@
     }
   }
 }
+
+
+@media (max-width: 1920px) {
+  .main {
+    min-height: calc(100vh - 54px);
+    width: calc(100% - 40px);
+    &__title {
+      padding-top: 70px;
+    }
+    &__slider-title {
+      font-size: 115px;
+    }
+  }
+  .about {
+    width: 45%;
+  }
+}
+@media (max-width: 1680px) {
+  .main {
+    &__title {
+      padding-top: 60px;
+    }
+    &__slider-title {
+      font-size: 95px;
+    }
+    &__slider {
+      width: calc(100% - 200px);
+    }
+    &__foot {
+      p {
+        font-size: 20px;
+      }
+      li {
+        margin-right: 90px;
+        font-size: 14px;
+      }
+      &-circle {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .about {
+    width: 55%;
+  }
+  .donut {
+    width: 460px;
+    height: 460px;
+  }
+  .circle {
+    left: -45px;
+    height: 100px;
+    width: 100px;
+    &__one {
+      width: 50px;
+      height: 50px;
+      margin-left: -25px;
+      margin-top: -25px;
+    }
+    &__two {
+      width: 70px;
+      height: 70px;
+      margin-left: -35px;
+      margin-top: -35px;
+    }
+    span {
+      font-size: 28px;
+    }
+  }
+
+  @keyframes Orbita {
+    from {
+      transform: rotate(0deg) translateX(230px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(230px) rotate(-360deg);
+    }
+  }
+  @keyframes Orbita2 {
+    from { transform: rotate(0) translateX(230px) rotate(0); }
+    to   { transform: rotate(-360deg) translateX(230px) rotate(360deg); }
+  }
+  @keyframes Orbita3 {
+    from { transform: rotate(0) translateX(-230px) rotate(0); }
+    to   { transform: rotate(360deg) translateX(-230px) rotate(-360deg); }
+  }
+}
+
+@media (max-width: 1440px) {
+  .main {
+    &__title {
+      h1 {
+        font-size: 76px;
+      }
+    }
+  }
+
+  .donut {
+    width: 400px;
+    height: 400px;
+    &__title {
+      font-size: 18px;
+    }
+  }
+  .circle {
+    left: -40px;
+    height: 90px;
+    width: 90px;
+    &__one {
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      margin-top: -23px;
+    }
+    &__two {
+      width: 60px;
+      height: 60px;
+      margin-left: -30px;
+      margin-top: -30px;
+    }
+    span {
+      font-size: 26px;
+    }
+  }
+
+  @keyframes Orbita {
+    from {
+      transform: rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+  }
+  @keyframes Orbita2 {
+    from { transform: rotate(0) translateX(200px) rotate(0); }
+    to   { transform: rotate(-360deg) translateX(200px) rotate(360deg); }
+  }
+  @keyframes Orbita3 {
+    from { transform: rotate(0) translateX(-200px) rotate(0); }
+    to   { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+  }
+
+
+  .about {
+    width: 60%;
+    &__title {
+      font-size: 20px;
+    }
+    &__info {
+      p {
+        font-size: 14px;
+      }
+    }
+    &__img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .main {
+    min-height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+  }
+  .main__title h1 {
+    font-size: 106px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .about {
+    width: 100%;
+    justify-content: center;
+    &__info {
+      width: max-content;
+    }
+    &__title {
+      font-size: 22px;
+    }
+  }
+  .main__slider {
+    position: relative;
+    flex-direction: column;
+  }
+  .main__slider-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .donut {
+    margin-bottom: 40px;
+  }
+  .main__foot p {
+    text-align: center;
+    font-size: 20px;
+  }
+  .main__foot ul {
+    justify-content: space-between;
+    margin-bottom: 30px;
+    li {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main__title h1 {
+    font-size: 81px;
+    margin-top: 30px;
+  }
+  .about__img {
+    width: 130px;
+    height: 130px;
+  }
+  .about__info {
+    padding-right: 20px;
+  }
+  .about__title {
+    font-size: 17px;
+  }
+  .about__info p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .main__slider {
+    width: calc(100% - 60px);
+    left: 30px;
+    &-title {
+      font-size: 64px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .main__title h1 {
+    font-size: 61px;
+    margin-top: 10px;
+  }
+  .about__title {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  .about__info p {
+    br {
+      display: none;
+    }
+  }
+  .main__slider-title {
+    font-size: 50px;
+  }
+
+  .donut {
+    width: 300px;
+    height: 300px;
+    &__title {
+      font-size: 14px;
+      width: 65%;
+    }
+  }
+  .circle {
+    left: -35px;
+    height: 80px;
+    width: 80px;
+    &__one {
+      width: 40px;
+      height: 40px;
+      margin-left: -20px;
+      margin-top: -20px;
+    }
+    &__two {
+      width: 50px;
+      height: 50px;
+      margin-left: -25px;
+      margin-top: -25px;
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+
+  @keyframes Orbita {
+    from {
+      transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+  @keyframes Orbita2 {
+    from { transform: rotate(0) translateX(150px) rotate(0); }
+    to   { transform: rotate(-360deg) translateX(150px) rotate(360deg); }
+  }
+  @keyframes Orbita3 {
+    from { transform: rotate(0) translateX(-150px) rotate(0); }
+    to   { transform: rotate(360deg) translateX(-150px) rotate(-360deg); }
+  }
+
+  .main__foot p {
+    font-size: 16px;
+  }
+  .main__foot ul {
+   flex-wrap: wrap;
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+
+
 

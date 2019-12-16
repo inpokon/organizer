@@ -14,6 +14,7 @@ export class ExperienceComponent implements OnInit {
       variant: 'standard',
       title: '"Мегамир IT"',
       desc: 'Разработка ERP для сети стоматологических клиник "New Smile".',
+      link: 'erp',
       tabs: [
         'React-Js',
         '1c-Битрикс'
@@ -54,7 +55,8 @@ export class ExperienceComponent implements OnInit {
       type: 'work',
       variant: 'standard',
       title: 'Разработка многостраничного сайта',
-      desc: 'для стомтологической клиники NewSmile.',
+      desc: 'для стоматологической клиники NewSmile.',
+      link: 'newsmile',
       tabs: [
         'Pug',
         'Jquery',
@@ -68,6 +70,7 @@ export class ExperienceComponent implements OnInit {
       variant: 'standard',
       title: 'Разработка интернет-магазина',
       desc: 'для салонов обуви Flyboots.',
+      link: 'flyboots',
       tabs: [
         'Pug',
         'Jquery',
@@ -90,7 +93,8 @@ export class ExperienceComponent implements OnInit {
       type: 'work',
       variant: 'standard',
       title: 'Разработка ERP',
-      desc: 'Начали командную работу по разрабоке ERP.',
+      desc: 'Начали командную работу по разработке ERP.',
+      link: 'erp',
       tabs: [
         'React-Js',
         '1C-Битрикс',
@@ -111,6 +115,7 @@ export class ExperienceComponent implements OnInit {
       variant: 'standard',
       title: '"Серебряный ключ"',
       desc: 'Landing-page для коттеджного поселка.',
+      link: 'key',
       tabs: [
         'Gulp',
         'Jquery',
@@ -147,7 +152,7 @@ export class ExperienceComponent implements OnInit {
       type: 'work',
       variant: 'standard',
       title: 'Frontend разработчик "Мегамир IT"',
-      desc: 'Устроился Frontend разработчиком в студию по разрабоке и тех.поддержки сайтов.',
+      desc: 'Устроился Frontend разработчиком в студию по разработке и тех.поддержки сайтов.',
       tabs: []
     },
     {

@@ -1,12 +1,12 @@
 <div class="work-wrapper">
   <app-nav></app-nav>
   <div class="work">
-    <div class="work__arrow work__arrow--prev">
+    <div class="work__arrow work__arrow--prev" (click)="onClickArrow(false)">
       <svg-icon-sprite
         src="assets/sprites/sprite.svg#arrow"
         classes="arrow arrow--prev"
-        width="50px"
-        height="50px"
+        width="25px"
+        height="25px"
       >
       </svg-icon-sprite>
     </div>
@@ -59,34 +59,41 @@
 
         </div>
         <div>
-          <h3>
-            В разработке принимали участие:
-          </h3>
-          <ul>
-            <li *ngFor="let member of work.members">
-              {{member}}
-            </li>
-          </ul>
-          <h3>
-            Стек технологий:
-          </h3>
-          <ul>
-            <li *ngFor="let skill of work.skills">
-              {{skill}}
-            </li>
-          </ul>
-          <h3>Краткое описание:</h3>
-          <p>{{work.desc}}</p>
+          <div class="work__wrap-desc">
+            <h3>
+              В разработке принимали участие:
+            </h3>
+            <ul>
+              <li *ngFor="let member of work.members">
+                {{member}}
+              </li>
+            </ul>
+          </div>
+          <div class="work__wrap-desc">
+            <h3>
+              Стек технологий:
+            </h3>
+            <ul>
+              <li *ngFor="let skill of work.skills">
+                {{skill}}
+              </li>
+            </ul>
+          </div>
+          <div class="work__wrap-desc">
+            <h3>Краткое описание:</h3>
+            <p>{{work.desc}}</p>
+          </div>
+
         </div>
       </div>
     </div>
 
-    <div class="work__arrow work__arrow--next">
+    <div class="work__arrow work__arrow--next" (click)="onClickArrow(true)">
       <svg-icon-sprite
         src="assets/sprites/sprite.svg#arrow"
         classes="arrow arrow--next"
-        width="50px"
-        height="50px"
+        width="25px"
+        height="25px"
       >
       </svg-icon-sprite>
     </div>

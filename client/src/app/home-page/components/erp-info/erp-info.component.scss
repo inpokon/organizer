@@ -187,3 +187,25 @@
     cursor: default;
   }
 }
+@media (max-width: 1199.98px) {
+  .erp__img {
+    width: 25%;
+  }
+}
+@media (max-width: 767.98px) {
+  .erp__img {
+    width: 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .erp__img {
+    width: 90%;
+  }
+  .erp__images {
+    justify-content: center;
+  }
+  .tab {
+    padding: 8px 10px 10px;
+    font-size: 12px;
+  }
+}

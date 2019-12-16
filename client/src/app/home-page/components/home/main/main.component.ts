@@ -12,19 +12,19 @@ export class MainComponent implements OnInit {
       code: 'js',
       sliderTitle: 'JavaScript',
       circleTitle: 'JS',
-      donutTitle: 'Основа веб разработки',
+      donutTitle: 'Основа веб разработки.',
     },
     {
       code: 'angular',
       sliderTitle: 'Angular',
       circleTitle: 'SPA',
-      donutTitle: 'Фреймворк для разработки веб-приложений',
+      donutTitle: 'Фреймворк для разработки веб-приложений.',
     },
     {
       code: 'react',
       sliderTitle: 'React Js',
       circleTitle: 'ERP',
-      donutTitle: 'JavaScript-библиотека',
+      donutTitle: 'JavaScript-библиотека.',
       },
   ];
 

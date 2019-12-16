@@ -79,9 +79,10 @@ export class SkillsComponent implements OnInit {
     ];
     this.width = 1000;
     const windowWidth = window.screen.width;
-    if (windowWidth > 768 && windowWidth <= 1024) this.width = 650;
-    if (windowWidth >= 480 && windowWidth <= 768) this.width = 400;
-    if (windowWidth < 480) this.width = 320;
+    if (windowWidth > 991 && windowWidth <= 1199) this.width = 800;
+    if (windowWidth > 767 && windowWidth <= 991) this.width = 650;
+    if (windowWidth > 575 && windowWidth <= 768) this.width = 400;
+    if (windowWidth <= 575) this.width = 200;
 
   }
 

@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Router} from "@angular/router";
+import {el} from "@angular/platform-browser/testing/src/browser_util";
 
 interface Work {
   title: string,
@@ -66,6 +67,7 @@ export class WorkComponent implements OnInit {
       title: 'Многостраничный сайт для стоматологической клиники "NewSmile"',
       img: 'newsmile',
       nameBtn: 'Перейти на сайт',
+      link: 'https://newsmile.clinic/',
       members: [
         'BackEnd разработчик',
         'Три FrontEnd разработчика (50% моей работы)',
@@ -84,6 +86,7 @@ export class WorkComponent implements OnInit {
       title: 'Интернет-магазин для сети салонов обуви "Flyboots"',
       img: 'flyboots',
       nameBtn: 'Перейти на сайт',
+      link: 'https://flyboots.ru/',
       members: [
         'BackEnd разработчик',
         '100% моей FrontEnd разработки',
@@ -103,6 +106,7 @@ export class WorkComponent implements OnInit {
       title: 'Landing-page для коттеджного поселка "Серебряный ключ"',
       img: 'key',
       nameBtn: 'Перейти на сайт',
+      link: 'https://xn--90aharfglvcf9e0b3bi.xn--p1ai/',
       members: [
         '100% моей FrontEnd разработки',
         'UI/UX Дизайнер'
@@ -128,6 +132,25 @@ export class WorkComponent implements OnInit {
     const url = this.router.url.split('/').join('');
     this.currentRoute = url;
     this.work = this.works[url];
+  }
+
+  onClickArrow = (way) => {
+    const url = this.router.url.split('/').join('');
+    let currentIndex = this.allWorks.indexOf(url);
+    if (way) {
+      currentIndex += 1;
+      if (currentIndex === this.allWorks.length) {
+        currentIndex = 0
+      }
+    } else {
+      currentIndex -= 1;
+      if (currentIndex < 0) {
+        currentIndex = this.allWorks.length - 1;
+      }
+    }
+    this.router.navigate(['/' + this.allWorks[currentIndex]]).then(() => {
+      this.work = this.works[this.allWorks[currentIndex]];
+    })
   }
 
 }

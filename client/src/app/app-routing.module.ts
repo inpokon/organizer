@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 import {AuthLayoutComponent} from "./organizer-page/shared/layouts/auth-layout/auth-layout.component";
 import {SiteLayoutComponent} from "./organizer-page/shared/layouts/site-layout/site-layout.component";
 import {LoginPageComponent} from "./organizer-page/login-page/login-page.component";
@@ -18,11 +18,20 @@ import {OrganizerPageComponent} from "./organizer-page/organizer-page.component"
 import {HomeComponent} from "./home-page/components/home/home.component";
 import {WorkComponent} from "./home-page/components/work/work.component";
 import {ErpInfoComponent} from "./home-page/components/erp-info/erp-info.component";
+import {ExperienceComponent} from "./home-page/components/home/experience/experience.component";
+import {FooterComponent} from "./home-page/components/footer/footer.component";
+import {WorksComponent} from "./home-page/components/home/works/works.component";
+import {SkillsComponent} from "./home-page/components/home/skills/skills.component";
 
 const routes: Routes = [
   {
     path: '', component: HomePageComponent, children: [
-      {path: '', component: HomeComponent},
+      {path: '', component: HomeComponent, children: [
+          {path: 'experience', component: ExperienceComponent},
+          {path: 'works', component: WorksComponent},
+          {path: 'skills', component: SkillsComponent},
+          {path: 'footer', component: FooterComponent},
+        ]},
       {path: 'erp', component: WorkComponent},
       {path: 'erp-info', component: ErpInfoComponent},
       {path: 'organizer-about', component: WorkComponent},
@@ -60,10 +69,14 @@ const routes: Routes = [
   }
 ];
 
+const routerOptions: ExtraOptions = {
+  useHash: false,
+  anchorScrolling: 'enabled',
+  scrollPositionRestoration: 'enabled', // Add options right here
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled', // Add options right here
-  })],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

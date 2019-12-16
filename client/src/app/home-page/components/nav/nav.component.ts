@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-nav',
@@ -8,21 +9,36 @@ import {Router} from "@angular/router";
 })
 export class NavComponent implements OnInit {
 
+  @ViewChild('experience') experience: ElementRef;
   navList = [
     {code: 'experience', name: 'Опыт работы и обучение'},
     {code: 'works', name: 'Портфолио'},
     {code: 'skills', name: 'Навыки'},
-    {code: 'contact', name: 'Контакты'},
+    {code: 'footer', name: 'Контакты'},
   ];
 
   isHome: boolean = true;
 
-  constructor(public router: Router) { }
+  isBurger: boolean = false;
+
+  openBurger: boolean = false;
+
+  constructor(private router: Router, private viewportScroller: ViewportScroller) { }
 
   ngOnInit() {
-    if (this.router.url !== '/') {
-      this.isHome = false;
-    }
+    const windowWidth = window.screen.width;
+    if (this.router.url !== '/' && this.router.url[1] !== '#') this.isHome = false;
+    if (windowWidth <= 1199) this.isBurger = true;
+  }
+
+  onClickItemMenu = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({behavior: 'smooth'});
+    this.openBurger = false;
+  };
+
+  onClickBurger = () => {
+    this.openBurger = !this.openBurger;
   }
 
 }

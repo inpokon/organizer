@@ -11,7 +11,7 @@
             <p>
               Я работаю Frontend-разработчиком более 2-х лет.
               <br>
-              Мое основное направление - это разработка на ReactJS.
+              Мое основное направление — это разработка на ReactJS.
               <br>
               <br>
               Также обладаю рядом других интересных технологий:
@@ -22,12 +22,37 @@
           </div>
         </div>
       </div>
+      <div class="main__slider {{activeClass}}">
+        <div class="main__slider-title">
+          {{sliderTitle}}
+        </div>
+        <div class="donut">
+          <div class="circle">
+          <span>
+            {{circleTitle}}
+          </span>
+          </div>
+          <div class="donut__title">
+            {{donutTitle}}
+          </div>
+          <div class="circle__one"></div>
+          <div class="circle__two"></div>
+          <div class="circle__three"></div>
+          <span class="donut__svg">
+          <svg-icon-sprite
+            src="assets/sprites/sprite.svg#{{svg}}"
+            classes="donut-svg"
+            style="width: 75%; height: 75%; opacity: 0.05; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)"
+          ></svg-icon-sprite>
+        </span>
+        </div>
+      </div>
       <div class="main__foot">
         <p>Легко поддерживать. Приятно смотреть!</p>
         <ul>
           <li>
             <span class="main__foot-circle"></span>
-            <span class="main__foot-item">Опыт работы <br>более 2х лет</span>
+            <span class="main__foot-item">Опыт работы <br>более 2-х лет</span>
           </li>
           <li>
             <span class="main__foot-circle"></span>
@@ -38,31 +63,6 @@
             <span class="main__foot-item">Сайты <br>под ключ</span>
           </li>
         </ul>
-      </div>
-    </div>
-    <div class="main__slider {{activeClass}}">
-      <div class="main__slider-title">
-        {{sliderTitle}}
-      </div>
-      <div class="donut">
-        <div class="circle">
-          <span>
-            {{circleTitle}}
-          </span>
-        </div>
-        <div class="donut__title">
-         {{donutTitle}}
-        </div>
-        <div class="circle__one"></div>
-        <div class="circle__two"></div>
-        <div class="circle__three"></div>
-        <span class="donut__svg">
-          <svg-icon-sprite
-            src="assets/sprites/sprite.svg#{{svg}}"
-            classes="donut-svg"
-            style="width: 75%; height: 75%; opacity: 0.05; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)"
-          ></svg-icon-sprite>
-        </span>
       </div>
     </div>
   </div>

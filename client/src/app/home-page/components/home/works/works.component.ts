@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-works',
   templateUrl: './works.component.html',
-  styleUrls: ['./works.component.scss']
+  styleUrls: ['./works.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class WorksComponent implements OnInit {
 
@@ -14,19 +15,19 @@ export class WorksComponent implements OnInit {
   spa = [
     {
       img: 'erp',
-      title: 'ERP для стомотологической клиники "NewSmile"',
+      title: 'ERP для стоматологической клиники "NewSmile"',
       link: '/erp',
     },
     {
       img: 'organizer',
-      title: 'Приложение-оргонайзей',
+      title: 'Приложение-органайзер',
       link: '/organizer-about'
     },
   ];
   sites = [
     {
       img: 'newsmile',
-      title: 'Многостраничный сайт для стомотологической клиники "NewSmile"',
+      title: 'Многостраничный сайт для стоматологической клиники "NewSmile"',
       link: '/newsmile',
     },
     {
@@ -36,7 +37,7 @@ export class WorksComponent implements OnInit {
     },
     {
       img: 'key',
-      title: 'Lending-page коттеджного поселка "Серебрянный ключ"',
+      title: 'Lending-page коттеджного поселка "Серебряный ключ"',
       link: '/key',
     },
   ];
@@ -48,7 +49,7 @@ export class WorksComponent implements OnInit {
     },
     {
       img: 'maria',
-      title: 'Интрнет-магазин кондитерских изделий',
+      title: 'Интернет-магазин кондитерских изделий',
       link: 'https://www.maria-irk.ru/',
     },
     {

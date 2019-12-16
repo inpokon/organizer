@@ -24,66 +24,66 @@ import {HistoryListComponent} from './organizer-page/history-page/history-list/h
 import {HistoryFilterComponent} from './organizer-page/history-page/history-filter/history-filter.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {IconSpriteModule} from 'ng-svg-icon-sprite';
-import { Ng2CarouselamosModule } from 'ng2-carouselamos';
-import { MainComponent } from './home-page/components/home/main/main.component';
-import { FooterComponent } from './home-page/components/footer/footer.component';
-import { WorkComponent } from './home-page/components/work/work.component';
-import { NavComponent } from './home-page/components/nav/nav.component';
-import { OrganizerPageComponent } from './organizer-page/organizer-page.component';
-import { ExperienceComponent } from './home-page/components/home/experience/experience.component';
-import { HomeComponent } from './home-page/components/home/home.component';
-import { WorksComponent } from './home-page/components/home/works/works.component';
-import { SkillsComponent } from './home-page/components/home/skills/skills.component';
-import { ErpInfoComponent } from './home-page/components/erp-info/erp-info.component';
+import {Ng2CarouselamosModule} from 'ng2-carouselamos';
+import {MainComponent} from './home-page/components/home/main/main.component';
+import {FooterComponent} from './home-page/components/footer/footer.component';
+import {WorkComponent} from './home-page/components/work/work.component';
+import {NavComponent} from './home-page/components/nav/nav.component';
+import {OrganizerPageComponent} from './organizer-page/organizer-page.component';
+import {ExperienceComponent} from './home-page/components/home/experience/experience.component';
+import {HomeComponent} from './home-page/components/home/home.component';
+import {WorksComponent} from './home-page/components/home/works/works.component';
+import {SkillsComponent} from './home-page/components/home/skills/skills.component';
+import {ErpInfoComponent} from './home-page/components/erp-info/erp-info.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        LoginPageComponent,
-        AuthLayoutComponent,
-        SiteLayoutComponent,
-        RegisterPageComponent,
-        OverviewPageComponent,
-        AnalyticsPageComponent,
-        HistoryPageComponent,
-        OrderPageComponent,
-        CategoriesPageComponent,
-        LoaderComponent,
-        CategoriesFormComponent,
-        PositionsFormComponent,
-        OrderCategoriesComponent,
-        OrderPositionsComponent,
-        HistoryListComponent,
-        HistoryFilterComponent,
-        HomePageComponent,
-        MainComponent,
-        FooterComponent,
-        WorkComponent,
-        NavComponent,
-        OrganizerPageComponent,
-        ExperienceComponent,
-        HomeComponent,
-        WorksComponent,
-        SkillsComponent,
-        ErpInfoComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        IconSpriteModule,
-        Ng2CarouselamosModule
-    ],
-    providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            multi: true,
-            useClass: TokenInterceptor
-        }
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    LoginPageComponent,
+    AuthLayoutComponent,
+    SiteLayoutComponent,
+    RegisterPageComponent,
+    OverviewPageComponent,
+    AnalyticsPageComponent,
+    HistoryPageComponent,
+    OrderPageComponent,
+    CategoriesPageComponent,
+    LoaderComponent,
+    CategoriesFormComponent,
+    PositionsFormComponent,
+    OrderCategoriesComponent,
+    OrderPositionsComponent,
+    HistoryListComponent,
+    HistoryFilterComponent,
+    HomePageComponent,
+    MainComponent,
+    FooterComponent,
+    WorkComponent,
+    NavComponent,
+    OrganizerPageComponent,
+    ExperienceComponent,
+    HomeComponent,
+    WorksComponent,
+    SkillsComponent,
+    ErpInfoComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    IconSpriteModule,
+    Ng2CarouselamosModule,
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      multi: true,
+      useClass: TokenInterceptor
+    }
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
