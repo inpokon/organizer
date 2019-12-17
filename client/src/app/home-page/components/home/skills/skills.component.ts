@@ -14,6 +14,9 @@ export class SkillsComponent implements OnInit {
 
   width: number;
 
+  widthSvg: string = '50px';
+  heightSvg: string = '50px';
+
   constructor() {
     this.items = [
       {
@@ -80,9 +83,26 @@ export class SkillsComponent implements OnInit {
     this.width = 1000;
     const windowWidth = window.screen.width;
     if (windowWidth > 991 && windowWidth <= 1199) this.width = 800;
-    if (windowWidth > 767 && windowWidth <= 991) this.width = 650;
-    if (windowWidth > 575 && windowWidth <= 768) this.width = 400;
-    if (windowWidth <= 575) this.width = 200;
+    if (windowWidth > 767 && windowWidth <= 991) {
+      this.width = 650;
+      this.widthSvg = '45px';
+      this.heightSvg = '45px';
+    }
+    if (windowWidth > 575 && windowWidth <= 768) {
+      this.widthSvg = '40px';
+      this.heightSvg = '40px';
+      this.width = 400;
+    }
+    if (windowWidth > 414 && windowWidth <= 575) {
+      this.width = 200;
+      this.widthSvg = '30px';
+      this.heightSvg = '30px';
+    }
+    if (windowWidth <= 414) {
+      this.width = 200;
+      this.widthSvg = '25px';
+      this.heightSvg = '25px';
+    }
 
   }
 

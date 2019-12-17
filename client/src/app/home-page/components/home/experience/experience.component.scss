@@ -54,7 +54,7 @@
     }
     &--right {
       border-radius: 188px 0 0 188px;
-      border-color: #2CCC9C;
+      border-color: #59FFCD;
       right: 0;
       &::before {
         right: 0;
@@ -94,9 +94,9 @@
       margin-left: 52%;
       .experience {
         &__date {
-          color: #2CCC9C;
+          color: #59FFCD;
           &::before {
-            background-color: #2CCC9C;
+            background-color: #59FFCD;
             left: -73px;
           }
         }
@@ -199,7 +199,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid rgba(#2CCC9C, 0.5);
+    border: 2px solid rgba(#59FFCD, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,19 +211,19 @@
     cursor: pointer;
     .reverse {
       padding-top: 5px;
-      color: rgba(#2CCC9C, 0.5);
+      color: rgba(#59FFCD, 0.5);
       transition: all .15s;
     }
     &:hover {
-      background-color: #2CCC9C;
-      border-color: #2CCC9C;
+      background-color: #59FFCD;
+      border-color: #59FFCD;
       .reverse {
         color: #ffffff;
       }
     }
     &:active {
-      border-color: rgba(#2CCC9C, 0.8);
-      background-color: #2CCC9C;
+      border-color: rgba(#59FFCD, 0.8);
+      background-color: #59FFCD;
       box-shadow: inset 0px 0px 38px -3px rgba(0,0,0,0.15);
     }
   }
@@ -379,5 +379,22 @@ a {
   }
   .experience__subtitle {
     width: auto;
+  }
+}
+
+@media (max-width: 414px) {
+  .experience__date {
+    font-size: 9px;
+  }
+  .experience__subtitle {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  .experience__desc {
+    font-size: 11px;
+    margin: 0 0 17px;
+  }
+  .experience__item .experience__text {
+    margin-top: 3px;
   }
 }

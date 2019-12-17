@@ -32,7 +32,7 @@ export class WorkComponent implements OnInit {
       nameBtn: 'Посмотреть презентацию',
       members: [
         'BackEnd разработчик',
-        'Три FrontEnd разработчика (90% моей работы)',
+        'Три Front-End разработчика (90% моей работы)',
         'UI/UX Дизайнер',
         'Проект менеджер'
       ],
@@ -70,7 +70,7 @@ export class WorkComponent implements OnInit {
       link: 'https://newsmile.clinic/',
       members: [
         'BackEnd разработчик',
-        'Три FrontEnd разработчика (50% моей работы)',
+        'Три Front-End разработчика (50% моей работы)',
         'UI/UX Дизайнер',
         'Проект менеджер'
       ],
@@ -89,7 +89,7 @@ export class WorkComponent implements OnInit {
       link: 'https://flyboots.ru/',
       members: [
         'BackEnd разработчик',
-        '100% моей FrontEnd разработки',
+        '100% моей Front-End разработки',
         'UI/UX Дизайнер',
         'Проект менеджер'
       ],
@@ -108,7 +108,7 @@ export class WorkComponent implements OnInit {
       nameBtn: 'Перейти на сайт',
       link: 'https://xn--90aharfglvcf9e0b3bi.xn--p1ai/',
       members: [
-        '100% моей FrontEnd разработки',
+        '100% моей Front-End разработки',
         'UI/UX Дизайнер'
       ],
       skills: [

@@ -150,3 +150,9 @@ button[disabled] .arrow {
     width: 160%;
   }
 }
+
+@media (max-width: 414px) {
+  .skills__slider div.controls {
+    width: 140%;
+  }
+}

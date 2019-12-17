@@ -55,7 +55,7 @@ export class ExperienceComponent implements OnInit {
       type: 'work',
       variant: 'standard',
       title: 'Разработка многостраничного сайта',
-      desc: 'для стоматологической клиники NewSmile.',
+      desc: 'Для стоматологической клиники NewSmile.',
       link: 'newsmile',
       tabs: [
         'Pug',
@@ -69,7 +69,7 @@ export class ExperienceComponent implements OnInit {
       type: 'work',
       variant: 'standard',
       title: 'Разработка интернет-магазина',
-      desc: 'для салонов обуви Flyboots.',
+      desc: 'Для салонов обуви Flyboots.',
       link: 'flyboots',
       tabs: [
         'Pug',
@@ -82,7 +82,7 @@ export class ExperienceComponent implements OnInit {
       type: 'course',
       variant: 'standard',
       title: 'Pug',
-      desc: 'Всегда рад изучить новую технологию для более качественной разработке.',
+      desc: 'Всегда рад изучить новую технологию для более качественной разработки.',
       tabs: [
         'Pug',
         'Webpack'
@@ -151,8 +151,8 @@ export class ExperienceComponent implements OnInit {
       date: 'Апрель 2018',
       type: 'work',
       variant: 'standard',
-      title: 'Frontend разработчик "Мегамир IT"',
-      desc: 'Устроился Frontend разработчиком в студию по разработке и тех.поддержки сайтов.',
+      title: 'Front-End разработчик "Мегамир IT"',
+      desc: 'Устроился Front-End разработчиком в студию по разработке и тех.поддержке сайтов.',
       tabs: []
     },
     {

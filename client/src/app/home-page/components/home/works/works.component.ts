@@ -37,7 +37,7 @@ export class WorksComponent implements OnInit {
     },
     {
       img: 'key',
-      title: 'Lending-page коттеджного поселка "Серебряный ключ"',
+      title: 'Landing-page коттеджного поселка "Серебряный ключ"',
       link: '/key',
     },
   ];

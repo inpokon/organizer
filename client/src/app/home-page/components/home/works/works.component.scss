@@ -114,7 +114,7 @@
     &--spa:hover {
       color: #ffffff;
       &::before {
-        background-color: rgba(#2CCC9C, 0.9);
+        background-color: rgba(#59FFCD, 0.9);
       }
     }
     &--sites:hover {
@@ -136,12 +136,12 @@
   &__spa {
     .works {
       &__hover {
-        background-color: rgba(#2CCC9C, 0.9);
+        background-color: rgba(#59FFCD, 0.9);
       }
     }
     a:hover {
       background-color: #fff;
-      color: rgba(#2CCC9C, 0.9);
+      color: rgba(#59FFCD, 0.9);
     }
   }
   &__sites {
@@ -289,5 +289,10 @@
     left: 50%;
     margin: 0;
     transform: translateX(-50%) rotate(-90deg);
+  }
+}
+@media (max-width: 414px) {
+  .works ul li {
+    height: 210px;
   }
 }
