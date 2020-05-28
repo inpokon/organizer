@@ -22,10 +22,41 @@ interface Work {
 export class WorkComponent implements OnInit {
 
   allWorks = [
-    'erp', 'organizer-about', 'newsmile', 'flyboots', 'key'
+    'erp', 'organizer-about', 'newsmile', 'flyboots', 'key', 'lummix', 'crm-fulogy'
   ];
 
   works = {
+    ['crm-fulogy']: {
+      title: 'CRM для компании по производству светильников',
+      img: 'lummix',
+      nameBtn: 'Перейти на сайт',
+      link: 'https://lummix.ru/',
+      members: [
+        'Front-End разработчик (50% моей работы)',
+      ],
+      skills: [
+        'React',
+        'GraphQL'
+      ],
+      desc: 'Недоработанный проект. CRM будет предназначена для компании по производству светильников'
+    },
+    lummix: {
+      title: 'SPA Сайт для компании по производству светильников на NextJS',
+      img: 'lummix',
+      nameBtn: 'Перейти на сайт',
+      link: 'https://lummix.ru/',
+      members: [
+        'Front-End разработчик (100% моей работы)',
+        'UI/UX Дизайнер'
+      ],
+      skills: [
+        'NextJS',
+        'React',
+        'Apollo',
+        'GraphQL'
+      ],
+      desc: 'Интернет магазин по производству и продажи светильников высокого качества'
+    },
     erp: {
       title: 'ERP для стоматологической клиники "NewSmile"',
       img: 'erp',

@@ -38,6 +38,8 @@ const routes: Routes = [
       {path: 'newsmile', component: WorkComponent},
       {path: 'flyboots', component: WorkComponent},
       {path: 'key', component: WorkComponent},
+      {path: 'lummix', component: WorkComponent},
+      {path: 'crm-fulogy', component: WorkComponent},
     ]
   },
   {

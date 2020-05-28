@@ -9,6 +9,48 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 export class ExperienceComponent implements OnInit {
   experience = [
     {
+      date: 'Апрель 2020',
+      type: 'work',
+      variant: 'standard',
+      title: 'Разработка CRM',
+      desc: 'для компании по производству светильников',
+      link: 'crm-fulogy',
+      tabs: [
+        'React', 'GraphQL'
+      ]
+    },
+    {
+      date: 'Март 2020',
+      type: 'course',
+      variant: 'min',
+      title: 'GraphQL',
+      desc: '',
+      tabs: [
+        'GraphQL'
+      ]
+    },
+    {
+      date: 'Февраль 2020',
+      type: 'work',
+      variant: 'standard',
+      title: 'NextJS',
+      desc: 'Разработка сайта lummix',
+      link: 'lummix',
+      tabs: [
+        'NextJS', 'React', 'Redux'
+      ]
+    },
+    {
+      date: 'Январь 2020',
+      type: 'course',
+      variant: 'min',
+      title: 'React hooks',
+      desc: '',
+      tabs: [
+        'useState', 'useEffect', 'useQuery', 'useSelector', 'useDispatch'
+      ]
+    },
+    {
       date: 'Декабрь 2019',
       type: 'work',
       variant: 'standard',

@@ -23,6 +23,16 @@ export class WorksComponent implements OnInit {
       title: 'Приложение-органайзер',
       link: '/organizer-about'
     },
+    {
+      img: 'crm-fulogy',
+      title: 'CRM для компнии произвадства светильников',
+      link: '/crm-fulogy'
+    },
+    {
+      img: 'lummix',
+      title: 'Сайт SPA на NextJS',
+      link: '/lummix'
+    },
   ];
   sites = [
     {
