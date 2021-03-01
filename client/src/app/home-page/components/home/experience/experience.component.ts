@@ -9,6 +9,18 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 export class ExperienceComponent implements OnInit {
   experience = [
     {
+      date: 'Март 2021',
+      type: 'work',
+      variant: 'standard',
+      title: '"Мегамир IT"',
+      desc: 'Переписали ERP для сети стоматологических клиник "New Smile" под Laravel и React hooks.',
+      link: 'erp',
+      tabs: [
+        'React-Js',
+        'Laravel'
+      ]
+    },
+    {
       date: 'Апрель 2020',
       type: 'work',
       variant: 'standard',
